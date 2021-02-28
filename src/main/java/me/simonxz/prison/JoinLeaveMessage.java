@@ -7,6 +7,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+import java.util.List;
+
 public class JoinLeaveMessage implements Listener {
 
     @EventHandler
@@ -14,6 +16,13 @@ public class JoinLeaveMessage implements Listener {
         Player p = e.getPlayer();
         if (p.hasPermission("prison.login")) {
             e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', "&a[+] " + p.getName()));
+
+            for (String welcome : Prison.getPlugin(Prison.class).getConfig().getStringList("WelcomeMessage")) {
+                welcome = welcome.replace("%playername%", p.getName());
+                p.sendMessage(ChatColor.translateAlternateColorCodes('&', welcome));
+            }
+
+
         }
     }
 

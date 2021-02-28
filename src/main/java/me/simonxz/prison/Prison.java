@@ -57,6 +57,7 @@ public final class Prison extends JavaPlugin implements Listener {
 
 
         loadConfigManager();
+        getConfig().options().copyDefaults();
         config();
         // Plugin startup logic
 
@@ -101,7 +102,7 @@ public final class Prison extends JavaPlugin implements Listener {
                 getLogger().info("Config.yml not found, creating!");
                 saveDefaultConfig();
             } else {
-                getLogger().info("Config.yml found, loading!");
+                getLogger().info("Config.uml found, loading!");
             }
         } catch (Exception e) {
             e.printStackTrace();

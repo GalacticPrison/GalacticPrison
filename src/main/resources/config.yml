@@ -1,0 +1,7 @@
+# Placeholders:
+# %playername% - Displays the players name in the welcome message
+
+WelcomeMessage:
+  - "&7"
+  - "&7Welcome &e%playername%"
+  - "&7"
