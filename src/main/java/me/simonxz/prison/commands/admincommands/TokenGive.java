@@ -28,6 +28,7 @@ public class TokenGive implements CommandExecutor {
                     giveCrystals(rec, amount);
                     rec.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e"));
                     rec.sendMessage(ChatColor.translateAlternateColorCodes('&', "&eYou have been given " + amount + " tokens."));
+                    rec.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e"));
                 }
                 else p.sendMessage(ChatColor.RED + "Amount must be between 1 & 1,000,000,000");
                 return true;
