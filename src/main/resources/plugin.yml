@@ -4,7 +4,7 @@ main: me.simonxz.prison.Prison
 api-version: 1.16
 authors: [ Simon_Xz ]
 description: Prison
-softdepend: [PlaceholderAPI]
+softdepend: [PlaceholderAPI, MVdWPlaceholderAPI, Vault]
 
 commands:
   help:
