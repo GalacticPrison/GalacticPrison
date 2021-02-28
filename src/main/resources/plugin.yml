@@ -1,0 +1,30 @@
+name: Prison
+version: ${project.version}
+main: me.simonxz.prison.Prison
+api-version: 1.16
+authors: [ Simon_Xz ]
+description: Prison
+
+commands:
+  help:
+    description: Displays the plugin help, replaces the normal help command with the custom one.
+    usage: /<command>
+    permission: prison.help
+  prefix:
+    description: Allows use to change prefix when a donor
+    usage: /<command>
+    permission: prison.donorprefix
+  rankup:
+    description: Allows users to progress through the prison ranks
+    usage: /<command>
+  prestige:
+    description: Allows users to progress through the prestiges
+    usage: /<command>
+  prestigetop:
+    description: Displays the top 5 players
+    usage: /<command>
+  tokentop:
+    description: Displays the top 5 players
+    usage: /<command>
+
+
