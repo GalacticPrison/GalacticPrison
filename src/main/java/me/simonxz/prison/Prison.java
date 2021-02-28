@@ -179,6 +179,10 @@ public final class Prison extends JavaPlugin implements Listener {
                     return bar + " " + round.format(percentage) + "%";
 
                 }
+                if (params.equalsIgnoreCase("tokens_formatted")) {
+                    int tokens = Api.getTokens(p);
+                    return Utils.format(tokens);
+                }
 
                 return null;
             }
