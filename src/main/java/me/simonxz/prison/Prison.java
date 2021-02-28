@@ -12,6 +12,7 @@ import me.simonxz.prison.files.ConfigManager;
 import me.simonxz.prison.files.PlayerManager;
 import me.simonxz.prison.leaderboard.PrestigeTop;
 import me.simonxz.prison.leaderboard.TokenTop;
+import me.simonxz.prison.tokens.TokenManager;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
 import net.milkbowl.vault.permission.Permission;
@@ -35,15 +36,6 @@ public final class Prison extends JavaPlugin implements Listener {
 
     private static Economy econ = null;
     private static Permission perms = null;
-
-
-    //
-    //this is for a test
-    //
-
-    //
-
-
 
 
     @Override
@@ -85,6 +77,7 @@ public final class Prison extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Rankup(), this);
         getServer().getPluginManager().registerEvents(new PrestigeTop(), this);
         getServer().getPluginManager().registerEvents(new TokenTop(), this);
+        getServer().getPluginManager().registerEvents(new TokenManager(), this);
 
     }
 

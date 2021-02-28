@@ -7,6 +7,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.text.DecimalFormat;
+
 public class TokenBalance implements CommandExecutor {
 
     @Override
@@ -15,7 +17,11 @@ public class TokenBalance implements CommandExecutor {
         if(sender instanceof Player) {
             Player p = (Player) sender;
 
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&b&lTOKENS: " + Api.getTokens(p)));
+            double tokens = Api.getTokens(p);
+            double amount = Double.parseDouble(String.valueOf(tokens));
+            DecimalFormat formatter = new DecimalFormat("#,###");
+
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&b&lTOKENS: &7" + formatter.format(amount)));
         }
         return true;
     }
