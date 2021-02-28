@@ -26,5 +26,8 @@ commands:
   tokentop:
     description: Displays the top 5 players
     usage: /<command>
+  tokens:
+    description: Displays the amount of tokens the player has
+    usage: /<command>
 
 

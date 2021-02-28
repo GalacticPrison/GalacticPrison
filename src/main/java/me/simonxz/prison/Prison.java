@@ -7,6 +7,7 @@ import me.simonxz.prison.commands.DonorPrefix;
 import me.simonxz.prison.commands.Help;
 import me.simonxz.prison.commands.Rankup.Prestige;
 import me.simonxz.prison.commands.Rankup.Rankup;
+import me.simonxz.prison.commands.TokenBalance;
 import me.simonxz.prison.files.ConfigManager;
 import me.simonxz.prison.files.PlayerManager;
 import me.simonxz.prison.leaderboard.PrestigeTop;
@@ -69,6 +70,7 @@ public final class Prison extends JavaPlugin implements Listener {
         this.getCommand("prestige").setExecutor(new Prestige());
         this.getCommand("prestigetop").setExecutor(new PrestigeTop());
         this.getCommand("tokentop").setExecutor(new TokenTop());
+        this.getCommand("tokens").setExecutor(new TokenBalance());
 
         //Events
         getServer().getPluginManager().registerEvents(new DonorPrefix(), this);

@@ -18,4 +18,14 @@ public class Api {
             return 0;
         }
     }
+
+    public static int getTokens(Player p) { return getTokens(Bukkit.getOfflinePlayer(p.getUniqueId())); }
+    public static int getTokens(OfflinePlayer p) {
+        try {
+            return Prison.cfgm.getPlayers().getInt("Players." + p.getUniqueId().toString() + ".Tokens");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
 }
