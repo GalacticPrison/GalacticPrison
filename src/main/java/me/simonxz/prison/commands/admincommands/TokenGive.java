@@ -25,7 +25,7 @@ public class TokenGive implements CommandExecutor {
                 Player rec = Bukkit.getServer().getPlayer(args[0]);
                 long amount = Long.parseLong(args[1]);
                 if (amount > 0 && amount <= 1000000000) {
-                    giveCrystals(rec, amount);
+                    giveTokens(rec, amount);
                     rec.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e"));
                     rec.sendMessage(ChatColor.translateAlternateColorCodes('&', "&eYou have been given " + amount + " tokens."));
                     rec.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e"));
@@ -40,7 +40,7 @@ public class TokenGive implements CommandExecutor {
     }
 
 
-    public void giveCrystals(Player p, long amount) {
+    public void giveTokens(Player p, long amount) {
         long balance = Prison.cfgm.getPlayers().getLong("Players." + p.getUniqueId().toString() + ".Tokens");
         long new_balance = (balance + amount);
         long max_balance = 1000000000;

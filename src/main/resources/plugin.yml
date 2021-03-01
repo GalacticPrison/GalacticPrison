@@ -30,5 +30,8 @@ commands:
   tokens:
     description: Displays the amount of tokens the player has
     usage: /<command>
+  tokensgive:
+    description: Allows admins to get player tokens
+    usage: /<command>
 
 
