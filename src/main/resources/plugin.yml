@@ -34,4 +34,3 @@ commands:
     description: Allows admins to get player tokens
     usage: /<command>
 
-

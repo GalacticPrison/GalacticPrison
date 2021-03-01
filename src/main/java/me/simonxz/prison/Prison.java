@@ -66,7 +66,6 @@ public final class Prison extends JavaPlugin implements Listener {
         this.getCommand("tokentop").setExecutor(new TokenTop());
         this.getCommand("tokens").setExecutor(new TokenBalance());
         this.getCommand("givetokens").setExecutor(new TokenGive());
-
         //Events
         getServer().getPluginManager().registerEvents(new DonorPrefix(), this);
         getServer().getPluginManager().registerEvents(new JoinLeaveMessage(), this);
